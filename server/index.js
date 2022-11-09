@@ -4,7 +4,7 @@ const port = 5001;
 
 const mongoose = require('mongoose');
 mongoose
-  .connect('mongodb+srv://test:test@test.9qvtytm.mongodb.net/?retryWrites=true&w=majority')
+  .connect(process.env.DB)
   .then(() => console.log('MongoDB Connected...'))
   .catch(err => console.log(err));
 
